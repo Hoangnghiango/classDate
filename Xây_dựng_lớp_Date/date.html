@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function MyDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.getDay = function () {
+                return this.day;
+            }
+            this.getMonth = function () {
+                return this.month;
+            }
+            this.getYear = function () {
+                return this.year;
+            }
+            this.setDay = function (day) {
+                this.day = day;
+            }
+            this.setMonth = function (month) {
+                this.month = month;
+            }
+            this.setYear = function (year) {
+                this.year = year;
+            }
+            this.setDate = function (day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            this.toString = function () {
+                return (day < 10 ? '0' : '') + day + '/' +
+                    (month < 10 ? '0' : '') + month + '/' +
+                    year;
+            }
+        }
+        let date = new MyDate(2, 2, 2007);
+        
+        // console.log(date);
+        // date.setDay(30);
+        // date.setMonth(3);
+        // date.setYear(2005);
+        // date.setDate().toString();
+        let day = date.getDay(); // 2
+
+        let month = date.getMonth(); // 2
+
+        let year = date.getYear(); // 2007
+        alert(date.toString());
+
+
+
+        alert(day + "/" + month + "/" + year);
+        alert(date)
+
+// setDate() để thiết đặt lại ngày, tháng, năm
+//  cho đối tượng MyDate
+    </script>
+</body>
+
+</html>
